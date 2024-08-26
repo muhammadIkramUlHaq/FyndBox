@@ -1,0 +1,28 @@
+{
+  "name": "fyndbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "start:frontend": "pnpm --filter fyndbox-frontend dev",
+    "start:backend": "pnpm --filter fyndbox-backend start:dev",
+    "start": "concurrently \"pnpm start:frontend\" \"pnpm start:backend\"",
+    "build:frontend": "pnpm --filter fyndbox-frontend build",
+    "build:backend": "pnpm --filter fyndbox-backend build",
+    "build": "concurrently \"pnpm build:frontend\" \"pnpm build:backend\"",
+    "lint:frontend": "pnpm --filter fyndbox-frontend lint",
+    "lint:backend": "pnpm --filter fyndbox-backend lint",
+    "lint": "concurrently \"pnpm lint:frontend\" \"pnpm lint:backend\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "concurrently": "^8.2.2",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.35.0"
+  }
+}
